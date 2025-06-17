@@ -3,6 +3,7 @@ body {
   color: #fafafa;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', Roboto, 'Helvetica Neue', 'Liberation Sans', Arial, sans-serif;
+  text-shadow: 0px 1px 1px black;
 }
 
 nav ul {
@@ -20,6 +21,7 @@ nav li {
 
 nav a {
   text-decoration: none;
+  text-shadow: none;
   background-color: #475569;
   color: #fafafa;
   padding: 16px;
@@ -29,6 +31,7 @@ nav a {
 
 nav a:hover {
   background-color: #1e293b;
+  filter: drop-shadow(0 0 0.5rem #1e293b);
 }
 
 footer {
@@ -63,6 +66,30 @@ footer p {
   text-align: left;
 }
 
+.play-section {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.play-section select {
+  background-color: #475569;
+  color: #fafafa;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border-style: none;
+  box-shadow: 0px 2px #1e293b;
+  transition-duration: 0.2s;
+}
+
+.play-section select:hover {
+  cursor: pointer;
+  background-color: #1e293b;
+  filter: drop-shadow(0 0 0.5rem #1e293b);
+}
+
 .play-section button {
   background-color: #10b981;
   color: #fafafa;
@@ -73,6 +100,7 @@ footer p {
   padding-right: 4rem;
   border-radius: 12px;
   border-style: none;
+  box-shadow: 0px 2px #0a714f;
   margin: 1.5rem;
   transition-duration: 0.2s;
 }
@@ -80,4 +108,29 @@ footer p {
 .play-section button:hover {
   cursor: pointer;
   filter: drop-shadow(0 0 0.5rem #10b981);
+}
+
+.general-section {
+  display: flex;
+  justify-content: center;
+}
+
+.general-section button {
+  background-color: #475569;
+  color: #fafafa;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 2.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-radius: 12px;
+  border-style: none;
+  box-shadow: 0px 2px #1e293b;
+  transition-duration: 0.2s;
+}
+
+.general-section button:hover {
+  cursor: pointer;
+  background-color: #1e293b;
+  filter: drop-shadow(0 0 0.5rem #1e293b);
 }
