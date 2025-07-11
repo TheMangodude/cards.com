@@ -18,7 +18,8 @@ nav div img {
 
 nav div ul {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
   gap: 2rem;
   list-style: none;
@@ -43,7 +44,22 @@ nav div ul li a {
 .card-pass-section {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 1.5rem;
+}
+
+.card-pass-section.active {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.card-pass-section::-webkit-scrollbar {
+  display: none;
+}
+
+.card-pass-section {
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .card-pass-section button {
@@ -52,19 +68,20 @@ nav div ul li a {
   align-items: center;
   background-color: #2d3a5b;
   color: #fafafa;
+  padding: 0;
   border-style: none;
-  padding: 0.5rem;
   border-radius: 12px;
 }
 
 .card-pass-section button img {
-  border-radius: 12px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
 }
 
 .card-shop-section {
   display: flex;
-  justify-content: space-between;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .card-shop-section button {
@@ -73,20 +90,23 @@ nav div ul li a {
   align-items: center;
   background-color: #2d3a5b;
   color: #fafafa;
+  padding: 0;
   border-style: none;
-  padding: 0.5rem;
   border-radius: 12px;
 }
 
 .card-shop-section button img {
-  border-radius: 12px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
 }
 
 button {
   transition: 0.2s;
+  box-shadow: 0px 2px 0px black;
 }
 
 button:hover {
   cursor: pointer;
   background-color: #142246;
+  box-shadow: 0px 0px 4px black;
 }
