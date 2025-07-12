@@ -4,78 +4,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Cards.com</title>
 </head>
 
 <body>
-  <header>
+  <div class="page">
     <nav>
-      <ul>
-        <li><a href="index.html">Cards.com</a></li>
-        <li><a href="">Tutorials</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="">Sign up</a></li>
-      </ul>
+      <div>
+        <a href="index.html"><img src="imgs/logo.png" alt="logo"></a>
+        <ul>
+          <li><a href="">Tutorials</a></li>
+          <li><a href="">Tournaments</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+          <li><a id="shop" href="shop.html">Shop</a></li>
+          <li><a id="sign-in" href="">Sign In</a></li>
+        </ul>
+      </div>
     </nav>
 
     <br>
 
-    <h1>Cards.com</h1>
-    <p>Play your favourite Card Games online or with your friends!</p>
-  </header>
+    <h1 class="h1-index"><img src="imgs/logo.png" alt="logo">Cards.com</h1>
 
-  <br>
+    <br>
 
-  <section class="play-section">
-    <div>
-      <form>
-        <label>Select a game:</label>
-        <select>
-          <option>Poker</option>
-          <option>Blackjack</option>
-          <option>Schafkopf</option>
-          <option>Herzeln</option>
-        </select>
-      </form>
+    <div class="select-game-section">
+      <h2 class="h2-index">Play your favourite Card Games online or with your friends!</h2>
 
-      <button>Play</button>
+      <div class="game-select">
+        <form>
+          <div class="selector">
+            <label>Select a game</label>
+            <select>
+              <option>Poker</option>
+              <option>Blackjack</option>
+              <option>Schafkopf</option>
+              <option>Herzeln</option>
+            </select>
+          </div>
+        </form>
+
+        <button id="play-button">Play</button>
+      </div>
     </div>
-  </section>
 
-  <br>
+    <br>
 
-  <section class="general-section">
     <h2>Popular Games</h2>
-    <div>
+    <div class="card-shop-section">
       <button><img src="imgs/poker.jpg"><label>Poker</label></button>
       <button><img src="imgs/blackjack.jpg"><label>Blackjack</label></button>
       <button><img src="imgs/schafkopf.jpg"><label>Schafkopf</label></button>
     </div>
-  </section>
 
-  <br>
+    <br>
 
-  <section class="general-section">
     <h2>Bavarian Card Games</h2>
-    <div>
+    <div class="card-shop-section">
       <button><img src="imgs/schafkopf.jpg"><label>Schafkopf</label></button>
       <button><img src="imgs/herzeln.jpg"><label>Herzeln</label></button>
     </div>
-  </section>
 
-  <br>
+    <br>
 
-  <section class="general-section">
     <h2>All Games</h2>
-    <div>
+    <div class="card-shop-section">
       <button><img src="imgs/poker.jpg"><label>Poker</label></button>
       <button><img src="imgs/blackjack.jpg"><label>Blackjack</label></button>
       <button><img src="imgs/schafkopf.jpg"><label>Schafkopf</label></button>
       <button><img src="imgs/herzeln.jpg"><label>Herzeln</label></button>
     </div>
-  </section>
+  </div>
 
   <br>
 
@@ -90,7 +93,7 @@
       </div>
 
       <div>
-        <h2>Follow Us</h2>
+        <h2 id="follow-links-h">Follow Us</h2>
         <ul>
           <li><a href="https://www.instagram.com">Instagram</a></li>
           <li><a href="https://www.youtube.com">YouTube</a></li>
@@ -101,7 +104,7 @@
 
     <br>
 
-    <p>Cards.com &copy; 2025</p>
+    <p id="copy">Cards.com &copy; 2025</p>
 
   </footer>
 </body>

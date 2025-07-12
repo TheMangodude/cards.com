@@ -1,2 +1,2 @@
 # cards.com
-ka irgendeine website
+Cards.com - Die beste Kartenspiel-App

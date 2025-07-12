@@ -3,6 +3,10 @@ body {
   background-image: url(imgs/background.jpg);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', Roboto, 'Helvetica Neue', 'Liberation Sans', Arial, sans-serif;
   text-shadow: 0px 1px 1px black;
+  margin: 0;
+}
+
+.page {
   margin-left: 15%;
   margin-right: 15%;
 }
@@ -10,10 +14,12 @@ body {
 nav div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 10px;
 }
 
 nav div img {
-  width: 106px;
+  width: 90px;
 }
 
 nav div ul {
@@ -31,14 +37,29 @@ nav div ul li a {
   background-color: #2d3a5b;
   padding: 1.25rem;
   border-radius: 12px;
+  transition-duration: 0.2s;
+}
+
+nav li a:hover {
+  background-color: #142246;
 }
 
 #shop {
   background-color: #3a801e;
+  transition-duration: 0.2s;
+}
+
+#shop:hover {
+  box-shadow: 0px 0px 15px #3a801e;
 }
 
 #sign-in {
   background-color: #bb8916;
+  transition-duration: 0.2s;
+}
+
+#sign-in:hover {
+  box-shadow: 0px 0px 15px #bb8916;
 }
 
 .card-pass-section {
@@ -48,27 +69,16 @@ nav div ul li a {
   gap: 1.5rem;
 }
 
-.card-pass-section.active {
-  cursor: grabbing;
-  user-select: none;
-}
-
-.card-pass-section::-webkit-scrollbar {
-  display: none;
-}
-
-.card-pass-section {
-  scrollbar-width: none;
-  /* Firefox */
-}
-
 .card-pass-section button {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #2d3a5b;
   color: #fafafa;
-  padding: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
   border-style: none;
   border-radius: 12px;
 }
@@ -76,6 +86,7 @@ nav div ul li a {
 .card-pass-section button img {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
+  object-fit: cover;
 }
 
 .card-shop-section {
@@ -90,7 +101,10 @@ nav div ul li a {
   align-items: center;
   background-color: #2d3a5b;
   color: #fafafa;
-  padding: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
   border-style: none;
   border-radius: 12px;
 }
@@ -98,15 +112,139 @@ nav div ul li a {
 .card-shop-section button img {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
 }
 
 button {
   transition: 0.2s;
-  box-shadow: 0px 2px 0px black;
+}
+
+button img {
+  margin-bottom: 10px;
 }
 
 button:hover {
   cursor: pointer;
   background-color: #142246;
   box-shadow: 0px 0px 4px black;
+}
+
+.select-game-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-game-section h2 {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 25%;
+}
+
+.game-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.selector {
+  font-family: 'Righteous', sans-serif;
+  background-color: #2d3a5b;
+  color: lightgrey;
+  padding-left: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  border-radius: 12px;
+}
+
+.selector select {
+  font-family: 'Righteous', sans-serif;
+  background-color: #f4bd08;
+  padding: 1rem;
+  border-style: none;
+  border-radius: 12px;
+  margin-left: 1rem;
+}
+
+#play-button {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2rem;
+  color: #fafafa;
+  background-color: #bb8916;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-style: none;
+  border-radius: 12px;
+}
+
+#play-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px #bb8916;
+}
+
+.h1-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.h1-index img {
+  width: 120px;
+}
+
+h1 {
+  font-family: 'Righteous', sans-serif;
+}
+
+.h2-index {
+  font-size: 2rem;
+  font-family: 'Righteous', sans-serif;
+}
+
+footer {
+  background-color: #142246;
+  width: 100vw;
+  margin-top: 1rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: #3a801e;
+}
+
+#copy {
+  text-align: center;
+  font-size: 0.95rem;
+  color: gray;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+#contact {
+  font-family: 'Righteous', sans-serif;
+}
+
+#follow-links-h {
+  font-family: 'Righteous', sans-serif;
 }
