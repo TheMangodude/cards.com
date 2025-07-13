@@ -1,14 +1,49 @@
+:root {
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(187, 137, 22, 0.5);
+  }
+
+  to {
+    box-shadow: 0 0 30px rgba(187, 137, 22, 0.8);
+  }
+}
+
 body {
   color: #fafafa;
   background-image: url(imgs/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', Roboto, 'Helvetica Neue', 'Liberation Sans', Arial, sans-serif;
   text-shadow: 0px 1px 1px black;
   margin: 0;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .page {
   margin-left: 15%;
   margin-right: 15%;
+}
+
+nav {
+  margin-bottom: var(--spacing-sm);
 }
 
 nav div {
@@ -62,11 +97,35 @@ nav li a:hover {
   box-shadow: 0px 0px 15px #bb8916;
 }
 
+.card-pass-h {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-pass-h button {
+  background-color: #3a801e;
+  color: #fafafa;
+  font-family: 'Righteous', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0.85rem;
+  border-style: none;
+  border-radius: 12px;
+}
+
+.card-pass-h button:hover {
+  box-shadow: 0px 0px 15px #3a801e;
+  background-color: #3a801e;
+}
+
 .card-pass-section {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 1.5rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .card-pass-section button {
@@ -83,16 +142,31 @@ nav li a:hover {
   border-radius: 12px;
 }
 
+.card-pass-section button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
 .card-pass-section button img {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
+  object-position: center;
+}
+
+.card-pass-section button span {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 5px 0;
 }
 
 .card-shop-section {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
 }
 
 .card-shop-section button {
@@ -109,16 +183,31 @@ nav li a:hover {
   border-radius: 12px;
 }
 
+
+.card-shop-section button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
 .card-shop-section button img {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
-  width: 250px;
-  height: 150px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
+  object-position: center;
+}
+
+
+.card-shop-section button span {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 5px 0;
 }
 
 button {
   transition: 0.2s;
+  font-size: 1rem;
 }
 
 button img {
@@ -131,11 +220,21 @@ button:hover {
   box-shadow: 0px 0px 4px black;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.level {
+  font-family: 'Righteous', sans-serif;
+  color: lightgray;
+}
+
 .select-game-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: var(--spacing-xl);
 }
 
 .select-game-section h2 {
@@ -153,6 +252,7 @@ button:hover {
 
 .selector {
   font-family: 'Righteous', sans-serif;
+  font-size: 1rem;
   background-color: #2d3a5b;
   color: lightgrey;
   padding-left: 1rem;
@@ -164,11 +264,18 @@ button:hover {
 
 .selector select {
   font-family: 'Righteous', sans-serif;
+  font-size: 1rem;
   background-color: #f4bd08;
   padding: 1rem;
   border-style: none;
   border-radius: 12px;
   margin-left: 1rem;
+  transition-duration: 0.2s;
+}
+
+.selector select:hover {
+  box-shadow: 0px 0px 15px #f4bd08;
+  cursor: pointer;
 }
 
 #play-button {
@@ -182,6 +289,8 @@ button:hover {
   padding-bottom: 1rem;
   border-style: none;
   border-radius: 12px;
+  box-shadow: 0 0 20px rgba(187, 137, 22, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
 #play-button:hover {
@@ -195,6 +304,7 @@ button:hover {
   align-items: center;
   font-size: 3rem;
   text-align: center;
+  margin-bottom: var(--spacing-xl);
 }
 
 .h1-index img {
@@ -212,8 +322,10 @@ h1 {
 
 footer {
   background-color: #142246;
-  width: 100vw;
-  margin-top: 1rem;
+  width: 100%;
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-xs);
+  margin-top: var(--spacing-xl);
 }
 
 .footer-content {
